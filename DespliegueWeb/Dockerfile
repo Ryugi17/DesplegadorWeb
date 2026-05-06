@@ -4,10 +4,7 @@ WORKDIR /app
 
 COPY pom.xml .
 COPY src ./src
-COPY mvnw .
-COPY .mvn .mvn
 
-RUN chmod +x mvnw
 RUN ./mvnw clena package -DskipTests
 
 FROM eclipse-temurin:17-jre
